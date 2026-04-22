@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>RGI Executive Dinner – Check-in</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
@@ -35,6 +35,8 @@
       background-color: var(--bg-root);
       color: var(--text-primary);
       min-height: 100vh;
+      /* compensa header fixed (altezza base ~80px) + eventuale safe area */
+      padding-top: calc(env(safe-area-inset-top, 0px) + 80px);
       padding-bottom: 3rem;
       -webkit-font-smoothing: antialiased;
     }
@@ -42,9 +44,14 @@
     /* ── Header ──────────────────────────────────────────────── */
 
     header {
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 100;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+      /* spinge il contenuto sotto la status bar / notch */
+      padding-top: env(safe-area-inset-top, 0px);
       background: linear-gradient(180deg, #080c18 0%, #0a1020 100%);
       border-bottom: 1px solid var(--border);
       box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
@@ -73,6 +80,8 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      /* si espande e si restringe, mai taglia il counter */
+      flex: 1 1 auto;
       min-width: 0;
     }
 
@@ -92,24 +101,29 @@
     }
 
     .header-title {
-      display: none;
-      font-size: 1rem;
+      /* sempre visibile, anche su schermi stretti */
+      flex: 1 1 auto;
+      min-width: 0;
+      font-size: 0.82rem;
       font-weight: 400;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       color: #ffffff;
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     @media (min-width: 500px) {
       .header-divider { display: block; }
-      .header-title   { display: block; }
+      .header-title   { font-size: 1rem; letter-spacing: 0.04em; }
     }
 
     .header-controls {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      flex-shrink: 0;
+      /* non si restringe mai: il titolo cede spazio, non il counter */
+      flex: 0 0 auto;
     }
 
     /* Row 2: filter select + sort chips + result count */
@@ -444,6 +458,11 @@
     /* ── Responsive – Desktop ────────────────────────────────── */
 
     @media (min-width: 600px) {
+      body {
+        /* header desktop leggermente più alto per padding maggiore */
+        padding-top: calc(env(safe-area-inset-top, 0px) + 88px);
+      }
+
       .header-inner {
         padding: 0.55rem 1.5rem;
       }
