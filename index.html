@@ -118,6 +118,64 @@
       padding: 1.25rem 1rem 0;
     }
 
+    /* ── Toolbar ─────────────────────────────────────────────── */
+
+    .toolbar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-bottom: 1rem;
+    }
+
+    .toolbar-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .filter-group,
+    .sort-group {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .chip:hover {
+      border-color: rgba(43, 172, 226, 0.4);
+      color: var(--text-primary);
+    }
+
+    .chip.active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .result-count {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
     /* ── List ────────────────────────────────────────────────── */
 
     .participants-list {
@@ -143,6 +201,16 @@
       background: var(--bg-card-hover);
       border-color: var(--border-hover);
       box-shadow: 0 0 0 1px var(--accent-glow), 0 6px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    .participant-card.is-present {
+      background: rgba(43, 172, 226, 0.05);
+      border-color: rgba(43, 172, 226, 0.45);
+    }
+
+    .participant-card.is-present:hover {
+      background: rgba(43, 172, 226, 0.09);
+      border-color: rgba(43, 172, 226, 0.65);
     }
 
     /* ── Avatar ──────────────────────────────────────────────── */
@@ -173,6 +241,29 @@
       object-fit: cover;
       display: block;
       background: var(--bg-root);
+    }
+
+    .avatar-badge {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      z-index: 2;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2.5px solid var(--bg-card);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .participant-card.is-present .avatar-badge {
+      display: flex;
     }
 
     /* ── Info ────────────────────────────────────────────────── */
@@ -233,8 +324,9 @@
       position: relative;
       width: 46px;
       height: 26px;
-      cursor: default;
+      cursor: pointer;
       user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .toggle-track {
@@ -243,6 +335,7 @@
       background: var(--toggle-track);
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .toggle-thumb {
@@ -253,6 +346,21 @@
       height: 16px;
       border-radius: 50%;
       background: var(--toggle-thumb);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .participant-card.is-present .toggle-track {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .participant-card.is-present .toggle-thumb {
+      transform: translateX(20px);
+      background: #ffffff;
+    }
+
+    .participant-card.is-present .toggle-label {
+      color: var(--accent);
     }
 
     /* ── Responsive – Desktop ────────────────────────────────── */
@@ -283,6 +391,22 @@
         padding: 1.5rem 1.5rem 0;
       }
 
+      .toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.1rem;
+      }
+
+      .toolbar-row {
+        flex: unset;
+      }
+
+      .chip {
+        font-size: 0.82rem;
+        padding: 0.32rem 0.85rem;
+      }
+
       .participant-card {
         padding: 1.1rem 1.4rem;
         gap: 1.25rem;
@@ -291,6 +415,14 @@
       .avatar {
         width: 124px;
         height: 124px;
+      }
+
+      .avatar-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 0.85rem;
+        bottom: 6px;
+        right: 6px;
       }
 
       .participant-name {
@@ -328,11 +460,28 @@
         <div class="header-divider"></div>
         <div class="header-title">Executive Dinner</div>
       </div>
-      <div class="counter-badge"><strong>0</strong>&nbsp;/ 21</div>
+      <div class="counter-badge"><strong id="presentCount">0</strong>&nbsp;/ 21</div>
     </div>
   </header>
 
   <main>
+    <div class="toolbar">
+      <div class="toolbar-row">
+        <div class="filter-group">
+          <button class="chip active" data-filter="all">Tutti</button>
+          <button class="chip" data-filter="present">Presenti</button>
+          <button class="chip" data-filter="absent">Non arrivati</button>
+        </div>
+      </div>
+      <div class="toolbar-row">
+        <div class="sort-group">
+          <button class="chip active" data-sort="name">A–Z Nome</button>
+          <button class="chip" data-sort="company">A–Z Società</button>
+        </div>
+        <span class="result-count" id="resultCount">21 partecipanti</span>
+      </div>
+    </div>
+
     <div class="participants-list" id="participantsList"></div>
   </main>
 
@@ -361,6 +510,12 @@
       { id: 21, firstName: 'Giorgio',         lastName: 'Maccagni',   company: 'CNP Assurances SA',      role: 'Responsabile Organizzazione, IT/PMO, Acquisti e Servizi Generali' },
     ];
 
+    const state = {
+      presence: new Set(),
+      filter: 'all',
+      sort: 'name'
+    };
+
     function getImagePath(lastName) {
       const normalized = lastName
         .toLowerCase()
@@ -370,43 +525,105 @@
       return `/img/${normalized}.jpg`;
     }
 
-    function renderParticipants() {
-      const list = document.getElementById('participantsList');
-
-      participants.forEach(p => {
-        const imgSrc = getImagePath(p.lastName);
-
-        const card = document.createElement('div');
-        card.className = 'participant-card';
-        card.dataset.id = p.id;
-
-        card.innerHTML = `
-          <div class="avatar">
-            <img
-              src="${imgSrc}"
-              alt="${p.firstName} ${p.lastName}"
-              onerror="this.onerror=null;this.src='/img/placeholder.jpg';"
-            >
-          </div>
-          <div class="participant-info">
-            <div class="participant-name">${p.firstName} ${p.lastName}</div>
-            <div class="participant-company">${p.company}</div>
-            <div class="participant-role">${p.role}</div>
-          </div>
-          <div class="toggle-wrapper">
-            <span class="toggle-label">Presente</span>
-            <div class="toggle-switch">
-              <div class="toggle-track"></div>
-              <div class="toggle-thumb"></div>
-            </div>
-          </div>
-        `;
-
-        list.appendChild(card);
+    function getVisible() {
+      let list = [...participants];
+      if (state.filter === 'present') {
+        list = list.filter(p => state.presence.has(p.id));
+      } else if (state.filter === 'absent') {
+        list = list.filter(p => !state.presence.has(p.id));
+      }
+      list.sort((a, b) => {
+        if (state.sort === 'company') {
+          return a.company.localeCompare(b.company, 'it') || a.lastName.localeCompare(b.lastName, 'it');
+        }
+        return a.lastName.localeCompare(b.lastName, 'it');
       });
+      return list;
     }
 
-    renderParticipants();
+    function createCard(p) {
+      const isPresent = state.presence.has(p.id);
+      const imgSrc = getImagePath(p.lastName);
+      const card = document.createElement('div');
+      card.className = 'participant-card' + (isPresent ? ' is-present' : '');
+      card.dataset.id = p.id;
+      card.innerHTML = `
+        <div class="avatar">
+          <img src="${imgSrc}" alt="${p.firstName} ${p.lastName}" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+          <div class="avatar-badge">✓</div>
+        </div>
+        <div class="participant-info">
+          <div class="participant-name">${p.firstName} ${p.lastName}</div>
+          <div class="participant-company">${p.company}</div>
+          <div class="participant-role">${p.role}</div>
+        </div>
+        <div class="toggle-wrapper">
+          <span class="toggle-label">Presente</span>
+          <div class="toggle-switch">
+            <div class="toggle-track"></div>
+            <div class="toggle-thumb"></div>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function renderList() {
+      const container = document.getElementById('participantsList');
+      container.innerHTML = '';
+      const visible = getVisible();
+      visible.forEach(p => container.appendChild(createCard(p)));
+      updateResultCount(visible.length);
+    }
+
+    function togglePresence(id) {
+      if (state.presence.has(id)) {
+        state.presence.delete(id);
+      } else {
+        state.presence.add(id);
+      }
+      if (state.filter !== 'all') {
+        renderList();
+      } else {
+        const card = document.querySelector(`.participant-card[data-id="${id}"]`);
+        card.classList.toggle('is-present', state.presence.has(id));
+      }
+      document.getElementById('presentCount').textContent = state.presence.size;
+    }
+
+    function updateResultCount(count) {
+      document.getElementById('resultCount').textContent = count === participants.length
+        ? `${count} partecipanti`
+        : `${count} di ${participants.length}`;
+    }
+
+    // Toggle presence via event delegation
+    document.getElementById('participantsList').addEventListener('click', e => {
+      const toggle = e.target.closest('.toggle-switch');
+      if (!toggle) return;
+      const card = toggle.closest('.participant-card');
+      if (card) togglePresence(Number(card.dataset.id));
+    });
+
+    // Filter chips
+    document.querySelector('.filter-group').addEventListener('click', e => {
+      const chip = e.target.closest('[data-filter]');
+      if (!chip) return;
+      state.filter = chip.dataset.filter;
+      document.querySelectorAll('.filter-group [data-filter]').forEach(c => c.classList.toggle('active', c === chip));
+      renderList();
+    });
+
+    // Sort chips
+    document.querySelector('.sort-group').addEventListener('click', e => {
+      const chip = e.target.closest('[data-sort]');
+      if (!chip) return;
+      state.sort = chip.dataset.sort;
+      document.querySelectorAll('.sort-group [data-sort]').forEach(c => c.classList.toggle('active', c === chip));
+      renderList();
+    });
+
+    renderList();
   </script>
 
 </body>
