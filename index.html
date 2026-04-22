@@ -17,21 +17,18 @@
       --bg-card:        #0e1420;
       --bg-card-hover:  #141d2e;
       --border:         #1a2640;
-      --border-hover:   rgba(0, 210, 240, 0.28);
+      --border-hover:   rgba(43, 172, 226, 0.35);
       --text-primary:   #dde6f0;
       --text-secondary: #7a91b0;
       --text-muted:     #3d5066;
-      --cyan:           #00d2f0;
-      --cyan-dim:       rgba(0, 210, 240, 0.12);
-      --cyan-glow:      rgba(0, 210, 240, 0.06);
-      --blue:           #1e6bff;
+      --accent:         #2bace2;
+      --accent-dim:     rgba(43, 172, 226, 0.12);
+      --accent-glow:    rgba(43, 172, 226, 0.07);
       --toggle-track:   #1e2d42;
       --toggle-thumb:   #3d5066;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Roboto', sans-serif;
@@ -58,64 +55,50 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.9rem 1.25rem;
+      padding: 0.875rem 1.25rem;
       max-width: 920px;
       margin: 0 auto;
     }
 
     .header-brand {
       display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      flex-direction: column;
+      gap: 0.2rem;
     }
 
-    .header-logo-mark {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      border-radius: 6px;
-      background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #fff;
-      flex-shrink: 0;
+    .header-logo svg {
+      height: 28px;
+      width: auto;
+      display: block;
     }
 
     .header-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--text-primary);
-      white-space: nowrap;
-    }
-
-    .header-title em {
-      font-style: normal;
-      color: var(--cyan);
+      color: #ffffff;
     }
 
     .counter-badge {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-      font-size: 0.78rem;
+      gap: 0.3rem;
+      font-size: 1rem;
       font-weight: 500;
       color: var(--text-secondary);
-      background: var(--cyan-dim);
-      border: 1px solid rgba(0, 210, 240, 0.22);
-      padding: 0.32rem 0.75rem;
+      background: var(--accent-dim);
+      border: 1px solid rgba(43, 172, 226, 0.25);
+      padding: 0.5rem 1.1rem;
       border-radius: 999px;
       white-space: nowrap;
       letter-spacing: 0.02em;
     }
 
     .counter-badge strong {
-      color: var(--cyan);
+      color: var(--accent);
       font-weight: 700;
+      font-size: 1.15rem;
     }
 
     /* ── Main ────────────────────────────────────────────────── */
@@ -131,7 +114,7 @@
     .participants-list {
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.7rem;
     }
 
     /* ── Card ────────────────────────────────────────────────── */
@@ -139,18 +122,18 @@
     .participant-card {
       display: flex;
       align-items: center;
-      gap: 0.875rem;
+      gap: 1rem;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 0.875rem 1rem;
+      border-radius: 16px;
+      padding: 1rem 1.1rem;
       transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
     }
 
     .participant-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-hover);
-      box-shadow: 0 0 0 1px var(--cyan-glow), 0 4px 24px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 0 1px var(--accent-glow), 0 6px 28px rgba(0, 0, 0, 0.45);
     }
 
     /* ── Avatar ──────────────────────────────────────────────── */
@@ -158,8 +141,8 @@
     .avatar {
       flex-shrink: 0;
       position: relative;
-      width: 54px;
-      height: 54px;
+      width: 88px;
+      height: 88px;
     }
 
     .avatar::after {
@@ -167,9 +150,9 @@
       position: absolute;
       inset: -2px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      background: linear-gradient(135deg, #1a5fa8, var(--accent));
       z-index: 0;
-      opacity: 0.5;
+      opacity: 0.55;
     }
 
     .avatar img {
@@ -191,34 +174,32 @@
     }
 
     .participant-name {
-      font-size: 0.92rem;
-      font-weight: 600;
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--text-primary);
       line-height: 1.25;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.3rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
     .participant-company {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--cyan);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
       letter-spacing: 0.01em;
-      margin-bottom: 0.18rem;
+      margin-bottom: 0.25rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
     .participant-role {
-      font-size: 0.7rem;
+      font-size: 0.85rem;
       font-weight: 400;
       color: var(--text-secondary);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.4;
     }
 
     /* ── Toggle ──────────────────────────────────────────────── */
@@ -228,11 +209,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.28rem;
+      gap: 0.3rem;
     }
 
     .toggle-label {
-      font-size: 0.58rem;
+      font-size: 0.6rem;
       font-weight: 500;
       letter-spacing: 0.07em;
       text-transform: uppercase;
@@ -272,13 +253,21 @@
         padding: 1rem 1.5rem;
       }
 
+      .header-logo svg {
+        height: 34px;
+      }
+
       .header-title {
-        font-size: 1.05rem;
+        font-size: 0.78rem;
       }
 
       .counter-badge {
-        font-size: 0.85rem;
-        padding: 0.38rem 0.9rem;
+        font-size: 1.1rem;
+        padding: 0.55rem 1.3rem;
+      }
+
+      .counter-badge strong {
+        font-size: 1.25rem;
       }
 
       main {
@@ -286,32 +275,27 @@
       }
 
       .participant-card {
-        padding: 1rem 1.25rem;
-        gap: 1.1rem;
-        border-radius: 16px;
+        padding: 1.1rem 1.4rem;
+        gap: 1.25rem;
       }
 
       .avatar {
-        width: 62px;
-        height: 62px;
+        width: 108px;
+        height: 108px;
       }
 
       .participant-name {
-        font-size: 1rem;
+        font-size: 1.15rem;
+        margin-bottom: 0.35rem;
       }
 
       .participant-company {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
       }
 
       .participant-role {
-        font-size: 0.74rem;
-      }
-    }
-
-    @media (min-width: 920px) {
-      .participants-list {
-        gap: 0.7rem;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -321,10 +305,20 @@
   <header>
     <div class="header-inner">
       <div class="header-brand">
-        <div class="header-logo-mark">RGI</div>
-        <div class="header-title">Executive <em>Dinner</em></div>
+        <div class="header-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 118.9">
+            <defs>
+              <style>.st0{fill:#fff}.st2{fill:#2bace2}</style>
+            </defs>
+            <path class="st0" d="M221.8,111.5V8.4h19.8v103.1h-19.8Z"/>
+            <path class="st0" d="M102.2,67.4c3.2-1.2,6.3-3,9.1-5.4,2.9-2.4,4.9-5.4,6.6-9,1.9-3.6,2.9-7.8,2.9-12.5s-1.4-11-4.2-15.7c-2.5-4.7-6.3-8.5-11.3-11.3-4.9-2.9-13.3-4.8-20.3-5H7.9l9.2,18.8h69.2c4.4,0,8.3,1.4,10.8,3.7,2.5,2.5,3.7,5.9,3.7,9.8s-1.4,7.3-3.7,9.6c-2.5,2.5-6.3,3.7-10.8,3.7h-29.6l8.3,16.7h16.9l21.2,40.6h22l-22.8-44.1h-.1Z"/>
+            <path class="st2" d="M38.7,53.1c-2.6-2.6-5.6-3.7-9.1-3.7s-6.5,1.2-9.1,3.7c-2.6,2.6-3.7,5.6-3.7,9.3s1.2,6.5,3.7,9.3c2.6,2.6,5.6,3.7,9.1,3.7s6.5-1.2,9.1-3.7c2.6-2.6,3.7-5.6,3.7-9.3s-1.2-6.5-3.7-9.3"/>
+            <path class="st0" d="M158.3,30.7c3.1-3.2,7.3-4.8,12.5-4.8s9.2,1.5,12.2,4.5c3,2.9,4.5,6.5,4.6,10.6h20.3c0-6.1-1.6-11.6-4.7-16.5-3.1-4.9-7.5-8.9-13.1-11.7-5.6-2.9-12.1-4.3-19.4-4.3s-13.9,1.5-19.6,4.4c-5.7,2.9-10.1,7.1-13.2,12.5-3.1,5.4-4.7,11.6-4.7,18.6v32.3c0,7,1.6,13.2,4.7,18.5,3.1,5.3,7.5,9.5,13.2,12.5s12.2,4.5,19.6,4.5,13.9-1.4,19.5-4.2c5.6-2.8,10-6.9,13-12.3,3.1-5.4,4.6-11.7,4.6-19v-22h-36.7v16.5h16.8v8.6c0,4.7-1.5,8.4-4.5,11s-7,4-12,4-9.5-1.6-12.8-4.8c-3.4-3.2-5-7.4-5-12.6v-33.4c0-5.2,1.6-9.4,4.7-12.6v-.3Z"/>
+          </svg>
+        </div>
+        <div class="header-title">Executive Dinner</div>
       </div>
-      <div class="counter-badge">Presenti: <strong>0</strong>&nbsp;/ 21</div>
+      <div class="counter-badge">Presenti:&nbsp;<strong>0</strong>&nbsp;/ 21</div>
     </div>
   </header>
 
