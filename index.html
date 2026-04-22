@@ -55,29 +55,38 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.875rem 1.25rem;
+      padding: 0.6rem 1.25rem;
       max-width: 920px;
       margin: 0 auto;
     }
 
     .header-brand {
       display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .header-logo svg {
-      height: 28px;
+      height: 26px;
       width: auto;
       display: block;
+      flex-shrink: 0;
+    }
+
+    .header-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
     }
 
     .header-title {
-      font-size: 0.72rem;
+      font-size: 1rem;
       font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      letter-spacing: 0.04em;
       color: #ffffff;
+      white-space: nowrap;
     }
 
     .counter-badge {
@@ -141,8 +150,8 @@
     .avatar {
       flex-shrink: 0;
       position: relative;
-      width: 88px;
-      height: 88px;
+      width: 104px;
+      height: 104px;
     }
 
     .avatar::after {
@@ -196,7 +205,7 @@
     }
 
     .participant-role {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 400;
       color: var(--text-secondary);
       line-height: 1.4;
@@ -250,15 +259,15 @@
 
     @media (min-width: 600px) {
       .header-inner {
-        padding: 1rem 1.5rem;
+        padding: 0.65rem 1.5rem;
       }
 
       .header-logo svg {
-        height: 34px;
+        height: 30px;
       }
 
       .header-title {
-        font-size: 0.78rem;
+        font-size: 1.1rem;
       }
 
       .counter-badge {
@@ -280,8 +289,8 @@
       }
 
       .avatar {
-        width: 108px;
-        height: 108px;
+        width: 124px;
+        height: 124px;
       }
 
       .participant-name {
@@ -295,7 +304,7 @@
       }
 
       .participant-role {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
   </style>
@@ -316,6 +325,7 @@
             <path class="st0" d="M158.3,30.7c3.1-3.2,7.3-4.8,12.5-4.8s9.2,1.5,12.2,4.5c3,2.9,4.5,6.5,4.6,10.6h20.3c0-6.1-1.6-11.6-4.7-16.5-3.1-4.9-7.5-8.9-13.1-11.7-5.6-2.9-12.1-4.3-19.4-4.3s-13.9,1.5-19.6,4.4c-5.7,2.9-10.1,7.1-13.2,12.5-3.1,5.4-4.7,11.6-4.7,18.6v32.3c0,7,1.6,13.2,4.7,18.5,3.1,5.3,7.5,9.5,13.2,12.5s12.2,4.5,19.6,4.5,13.9-1.4,19.5-4.2c5.6-2.8,10-6.9,13-12.3,3.1-5.4,4.6-11.7,4.6-19v-22h-36.7v16.5h16.8v8.6c0,4.7-1.5,8.4-4.5,11s-7,4-12,4-9.5-1.6-12.8-4.8c-3.4-3.2-5-7.4-5-12.6v-33.4c0-5.2,1.6-9.4,4.7-12.6v-.3Z"/>
           </svg>
         </div>
+        <div class="header-divider"></div>
         <div class="header-title">Executive Dinner</div>
       </div>
       <div class="counter-badge">Presenti:&nbsp;<strong>0</strong>&nbsp;/ 21</div>
