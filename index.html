@@ -176,12 +176,6 @@
       color: var(--accent);
     }
 
-    .result-count {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
 
     /* ── Filter select ───────────────────────────────────────── */
 
@@ -565,7 +559,6 @@
             <button class="chip" data-sort="company">A–Z Società</button>
           </div>
         </div>
-        <span class="result-count" id="resultCount">21 partecipanti</span>
       </div>
 
     </div>
@@ -663,7 +656,6 @@
       container.innerHTML = '';
       const visible = getVisible();
       visible.forEach(p => container.appendChild(createCard(p)));
-      updateResultCount(visible.length);
     }
 
     function togglePresence(id) {
@@ -680,12 +672,6 @@
       }
       savePresence();
       document.getElementById('presentCount').textContent = state.presence.size;
-    }
-
-    function updateResultCount(count) {
-      document.getElementById('resultCount').textContent = count === participants.length
-        ? `${count} partecipanti`
-        : `${count} di ${participants.length}`;
     }
 
     // ── localStorage ─────────────────────────────────────────────
