@@ -59,7 +59,7 @@
       gap: 0;
     }
 
-    /* Row 1: brand + filter select + counter */
+    /* Row 1: brand + counter */
 
     .header-top {
       display: flex;
@@ -112,7 +112,7 @@
       flex-shrink: 0;
     }
 
-    /* Row 2: sort chips + result count */
+    /* Row 2: filter select + sort chips + result count */
 
     .header-bottom {
       display: flex;
@@ -121,6 +121,12 @@
       gap: 0.5rem;
       padding-top: 0.35rem;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .bottom-filters {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
     }
 
     .sort-group {
@@ -174,7 +180,7 @@
     .filter-select-wrap::after {
       content: '▾';
       position: absolute;
-      right: 0.65rem;
+      right: 0.55rem;
       color: var(--accent);
       pointer-events: none;
       font-size: 1rem;
@@ -192,9 +198,9 @@
       border-radius: 999px;
       color: #dde6f0;
       font-family: 'Roboto', sans-serif;
-      font-size: 0.88rem;
+      font-size: 0.78rem;
       font-weight: 500;
-      padding: 0.44rem 1.9rem 0.44rem 0.9rem;
+      padding: 0.28rem 1.55rem 0.28rem 0.72rem;
       cursor: pointer;
       outline: none;
       transition: border-color 0.15s;
@@ -394,11 +400,11 @@
       cursor: pointer;
       user-select: none;
       -webkit-tap-highlight-color: transparent;
-      transition: transform 0.15s ease;
+      transition: opacity 0.15s ease;
     }
 
     .toggle-switch:hover {
-      transform: scale(1.12);
+      opacity: 0.65;
     }
 
     .toggle-track {
@@ -407,11 +413,7 @@
       background: var(--toggle-track);
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.07);
-      transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.18s ease;
-    }
-
-    .toggle-switch:hover .toggle-track {
-      box-shadow: 0 0 0 4px rgba(43, 172, 226, 0.18);
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .toggle-thumb {
@@ -452,11 +454,6 @@
 
       .header-title {
         font-size: 1.1rem;
-      }
-
-      .filter-select-wrap select {
-        font-size: 0.92rem;
-        padding: 0.48rem 2rem 0.48rem 1rem;
       }
 
       .counter-badge {
@@ -531,6 +528,12 @@
           <div class="header-title">Executive Dinner</div>
         </div>
         <div class="header-controls">
+          <div class="counter-badge"><strong id="presentCount">0</strong>&nbsp;/ 21</div>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="bottom-filters">
           <div class="filter-select-wrap">
             <select id="filterSelect">
               <option value="all">Tutti</option>
@@ -538,14 +541,10 @@
               <option value="absent">Non arrivati</option>
             </select>
           </div>
-          <div class="counter-badge"><strong id="presentCount">0</strong>&nbsp;/ 21</div>
-        </div>
-      </div>
-
-      <div class="header-bottom">
-        <div class="sort-group">
-          <button class="chip active" data-sort="name">A–Z Nome</button>
-          <button class="chip" data-sort="company">A–Z Società</button>
+          <div class="sort-group">
+            <button class="chip active" data-sort="name">A–Z Nome</button>
+            <button class="chip" data-sort="company">A–Z Società</button>
+          </div>
         </div>
         <span class="result-count" id="resultCount">21 partecipanti</span>
       </div>
