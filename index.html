@@ -594,7 +594,7 @@
         .normalize('NFD')
         .replace(/[̀-ͯ]/g, '')
         .replace(/[^a-z]/g, '');
-      return `/img/${normalized}.jpg`;
+      return `img/${normalized}.jpg`;
     }
 
     function getVisible() {
@@ -621,7 +621,7 @@
       card.dataset.id = p.id;
       card.innerHTML = `
         <div class="avatar">
-          <img src="${imgSrc}" alt="${p.lastName} ${p.firstName}" onerror="this.onerror=null;this.src='/img/placeholder.jpg';">
+          <img src="${imgSrc}" alt="${p.lastName} ${p.firstName}" onerror="this.onerror=null;this.src='img/placeholder.jpg';">
           <div class="avatar-badge">✓</div>
         </div>
         <div class="participant-info">
