@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RGI Executive Dinner – Check-in</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-root:        #05050e;
+      --bg-card:        #0e1420;
+      --bg-card-hover:  #141d2e;
+      --border:         #1a2640;
+      --border-hover:   rgba(0, 210, 240, 0.28);
+      --text-primary:   #dde6f0;
+      --text-secondary: #7a91b0;
+      --text-muted:     #3d5066;
+      --cyan:           #00d2f0;
+      --cyan-dim:       rgba(0, 210, 240, 0.12);
+      --cyan-glow:      rgba(0, 210, 240, 0.06);
+      --blue:           #1e6bff;
+      --toggle-track:   #1e2d42;
+      --toggle-thumb:   #3d5066;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-root);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding-bottom: 3rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ──────────────────────────────────────────────── */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(180deg, #080c18 0%, #0a1020 100%);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1.25rem;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .header-logo-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .header-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .header-title em {
+      font-style: normal;
+      color: var(--cyan);
+    }
+
+    .counter-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0, 210, 240, 0.22);
+      padding: 0.32rem 0.75rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .counter-badge strong {
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    /* ── Main ────────────────────────────────────────────────── */
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 0;
+    }
+
+    /* ── List ────────────────────────────────────────────────── */
+
+    .participants-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    /* ── Card ────────────────────────────────────────────────── */
+
+    .participant-card {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 0.875rem 1rem;
+      transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .participant-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      box-shadow: 0 0 0 1px var(--cyan-glow), 0 4px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ── Avatar ──────────────────────────────────────────────── */
+
+    .avatar {
+      flex-shrink: 0;
+      position: relative;
+      width: 54px;
+      height: 54px;
+    }
+
+    .avatar::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    .avatar img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-root);
+    }
+
+    /* ── Info ────────────────────────────────────────────────── */
+
+    .participant-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .participant-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .participant-company {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--cyan);
+      letter-spacing: 0.01em;
+      margin-bottom: 0.18rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .participant-role {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── Toggle ──────────────────────────────────────────────── */
+
+    .toggle-wrapper {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.28rem;
+    }
+
+    .toggle-label {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 46px;
+      height: 26px;
+      cursor: default;
+      user-select: none;
+    }
+
+    .toggle-track {
+      position: absolute;
+      inset: 0;
+      background: var(--toggle-track);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .toggle-thumb {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--toggle-thumb);
+    }
+
+    /* ── Responsive – Desktop ────────────────────────────────── */
+
+    @media (min-width: 600px) {
+      .header-inner {
+        padding: 1rem 1.5rem;
+      }
+
+      .header-title {
+        font-size: 1.05rem;
+      }
+
+      .counter-badge {
+        font-size: 0.85rem;
+        padding: 0.38rem 0.9rem;
+      }
+
+      main {
+        padding: 1.5rem 1.5rem 0;
+      }
+
+      .participant-card {
+        padding: 1rem 1.25rem;
+        gap: 1.1rem;
+        border-radius: 16px;
+      }
+
+      .avatar {
+        width: 62px;
+        height: 62px;
+      }
+
+      .participant-name {
+        font-size: 1rem;
+      }
+
+      .participant-company {
+        font-size: 0.8rem;
+      }
+
+      .participant-role {
+        font-size: 0.74rem;
+      }
+    }
+
+    @media (min-width: 920px) {
+      .participants-list {
+        gap: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="header-logo-mark">RGI</div>
+        <div class="header-title">Executive <em>Dinner</em></div>
+      </div>
+      <div class="counter-badge">Presenti: <strong>0</strong>&nbsp;/ 21</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="participants-list" id="participantsList"></div>
+  </main>
+
+  <script>
+    const participants = [
+      { id: 1,  firstName: 'Danilo',          lastName: 'Ughetto',    company: 'Assimoco',               role: 'Direttore ICT' },
+      { id: 2,  firstName: 'Claudia',         lastName: 'Ferraguti',  company: 'Credemassicurazioni',    role: 'Direttore generale' },
+      { id: 3,  firstName: 'Tarek',           lastName: 'Ghaddar',    company: 'HDI Assicurazioni',      role: 'Chief Information Officer' },
+      { id: 4,  firstName: 'Luca',            lastName: 'Lanzoni',    company: 'HDI Assicurazioni',      role: 'General Manager / COO' },
+      { id: 5,  firstName: 'Maurizio',        lastName: 'Sala',       company: 'Helvetia',               role: 'Head IT Application Service Management' },
+      { id: 6,  firstName: 'Andrea',          lastName: 'Amadei',     company: 'Intesa Assicurazioni',   role: 'Chief Operating Officer' },
+      { id: 7,  firstName: 'Ciro',            lastName: 'Calzolaio',  company: 'Intesa Assicurazioni',   role: 'Responsabile Sistemi Informativi Danni' },
+      { id: 8,  firstName: 'Vito',            lastName: 'Capezzera',  company: 'Mediolanum Assicurazioni', role: 'Responsabile Operations Protezione, Mediolanum Assicurazioni e Mediolanum Vita' },
+      { id: 9,  firstName: 'Laura',           lastName: 'Baiano',     company: 'Mediolanum Assicurazioni', role: 'Chief Application Officer' },
+      { id: 10, firstName: 'Stefano',         lastName: 'Berni',      company: 'Unipol Assicurazioni',   role: 'Responsabile IT' },
+      { id: 11, firstName: 'Marco',           lastName: 'Bellea',     company: 'Unicredit',              role: 'Head of Client & Insurance Solutions' },
+      { id: 12, firstName: 'Enzo Alessandro', lastName: 'Di Puma',    company: 'AXA Italia',             role: 'Chief Operating Officer' },
+      { id: 13, firstName: 'Assunta',         lastName: 'Carbonara',  company: 'Amtrust',                role: 'Head of Technology & System Development' },
+      { id: 14, firstName: 'Thomas',          lastName: 'Lausdat',    company: 'Groupama',               role: 'Direttore Vita e Linea Persone' },
+      { id: 15, firstName: 'Marco',           lastName: 'Barioni',    company: 'Reale Group',            role: 'Group Chief Information Technology Officer' },
+      { id: 16, firstName: 'Marco',           lastName: 'di Guida',   company: 'Credit Agricole',        role: 'CEO' },
+      { id: 17, firstName: 'Andrea',          lastName: 'Brusa',      company: 'Reale Mutua',            role: 'Chief Software Development Officer' },
+      { id: 18, firstName: 'Umberto',         lastName: 'Costanzini', company: 'Generali',               role: 'CEO Generali Core Tech' },
+      { id: 19, firstName: 'Paolo',           lastName: 'Calvi',      company: 'Credemvita',             role: 'Team Leader Products and Operation' },
+      { id: 20, firstName: 'Paola',           lastName: 'Invidia',    company: 'CNP Assurances SA',      role: 'Country General Manager' },
+      { id: 21, firstName: 'Giorgio',         lastName: 'Maccagni',   company: 'CNP Assurances SA',      role: 'Responsabile Organizzazione, IT/PMO, Acquisti e Servizi Generali' },
+    ];
+
+    function getImagePath(lastName) {
+      const normalized = lastName
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z]/g, '');
+      return `/img/${normalized}.jpg`;
+    }
+
+    function renderParticipants() {
+      const list = document.getElementById('participantsList');
+
+      participants.forEach(p => {
+        const imgSrc = getImagePath(p.lastName);
+
+        const card = document.createElement('div');
+        card.className = 'participant-card';
+        card.dataset.id = p.id;
+
+        card.innerHTML = `
+          <div class="avatar">
+            <img
+              src="${imgSrc}"
+              alt="${p.firstName} ${p.lastName}"
+              onerror="this.onerror=null;this.src='/img/placeholder.jpg';"
+            >
+          </div>
+          <div class="participant-info">
+            <div class="participant-name">${p.firstName} ${p.lastName}</div>
+            <div class="participant-company">${p.company}</div>
+            <div class="participant-role">${p.role}</div>
+          </div>
+          <div class="toggle-wrapper">
+            <span class="toggle-label">Presente</span>
+            <div class="toggle-switch">
+              <div class="toggle-track"></div>
+              <div class="toggle-thumb"></div>
+            </div>
+          </div>
+        `;
+
+        list.appendChild(card);
+      });
+    }
+
+    renderParticipants();
+  </script>
+
+</body>
+</html>
