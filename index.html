@@ -659,6 +659,7 @@
         const card = document.querySelector(`.participant-card[data-id="${id}"]`);
         card.classList.toggle('is-present', state.presence.has(id));
       }
+      savePresence();
       document.getElementById('presentCount').textContent = state.presence.size;
     }
 
@@ -667,6 +668,30 @@
         ? `${count} partecipanti`
         : `${count} di ${participants.length}`;
     }
+
+    // ── localStorage ─────────────────────────────────────────────
+
+    const STORAGE_KEY = 'rgi_checkin_presence';
+
+    /** Ripristina gli ID presenti da localStorage all'avvio. */
+    function loadPresence() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const ids = JSON.parse(raw);
+          if (Array.isArray(ids)) state.presence = new Set(ids);
+        }
+      } catch (e) { /* private browsing o quota exceeded: si parte da zero */ }
+    }
+
+    /** Persiste lo stato corrente; sovrascrive solo la chiave dell'app. */
+    function savePresence() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(state.presence)));
+      } catch (e) { /* ignore */ }
+    }
+
+    // ── Event listeners ───────────────────────────────────────────
 
     document.getElementById('participantsList').addEventListener('click', e => {
       const toggle = e.target.closest('.toggle-switch');
@@ -688,7 +713,10 @@
       renderList();
     });
 
+    // Ripristina lo stato persistito, poi renderizza
+    loadPresence();
     renderList();
+    document.getElementById('presentCount').textContent = state.presence.size;
   </script>
 
 </body>
