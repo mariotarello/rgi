@@ -114,14 +114,16 @@ function openModal(p) {
   expContainer.innerHTML = '';
   if (p.experience && p.experience.length > 0) {
     p.experience.forEach(exp => {
-      const item = document.createElement('div');
-      item.className = 'modal-exp-item';
-      item.innerHTML = `
-        <div class="modal-exp-company">${exp.company}</div>
-        <div class="modal-exp-role">${exp.role}</div>
-        <div class="modal-exp-period">${exp.period}</div>
-      `;
-      expContainer.appendChild(item);
+      const group = document.createElement('div');
+      group.className = 'modal-exp-group';
+      const rolesHtml = exp.roles.map(r => `
+        <div class="modal-exp-role-item">
+          <div class="modal-exp-role">${r.role}</div>
+          <div class="modal-exp-period">${r.period}</div>
+        </div>
+      `).join('');
+      group.innerHTML = `<div class="modal-exp-company">${exp.company}</div>${rolesHtml}`;
+      expContainer.appendChild(group);
     });
     expSection.style.display = '';
   } else {
