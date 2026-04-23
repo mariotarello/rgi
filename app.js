@@ -180,6 +180,7 @@ fetch('participants.json')
   .then(r => r.json())
   .then(data => {
     participants = data;
+    document.getElementById('totalCount').textContent = participants.length;
     loadPresence();
     renderList();
     document.getElementById('presentCount').textContent = state.presence.size;
