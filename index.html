@@ -56,12 +56,17 @@
 
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Chiudi">&times;</button>
       <img class="modal-photo" id="modalPhoto" src="" alt=""
            onerror="this.onerror=null;this.src='img/placeholder.jpg';">
-      <div class="modal-info">
+      <div class="modal-info" id="modalInfo">
         <div class="modal-name" id="modalName"></div>
         <div class="modal-company" id="modalCompany"></div>
         <div class="modal-role" id="modalRole"></div>
+        <div class="modal-experience" id="modalExperienceSection">
+          <div class="modal-exp-title">Professional Experience</div>
+          <div id="modalExperience"></div>
+        </div>
       </div>
     </div>
   </div>

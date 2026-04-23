@@ -108,6 +108,27 @@ function openModal(p) {
   document.getElementById('modalName').textContent    = `${p.lastName} ${p.firstName}`;
   document.getElementById('modalCompany').textContent = p.company;
   document.getElementById('modalRole').textContent    = p.role;
+
+  const expSection   = document.getElementById('modalExperienceSection');
+  const expContainer = document.getElementById('modalExperience');
+  expContainer.innerHTML = '';
+  if (p.experience && p.experience.length > 0) {
+    p.experience.forEach(exp => {
+      const item = document.createElement('div');
+      item.className = 'modal-exp-item';
+      item.innerHTML = `
+        <div class="modal-exp-company">${exp.company}</div>
+        <div class="modal-exp-role">${exp.role}</div>
+        <div class="modal-exp-period">${exp.period}</div>
+      `;
+      expContainer.appendChild(item);
+    });
+    expSection.style.display = '';
+  } else {
+    expSection.style.display = 'none';
+  }
+
+  document.getElementById('modalInfo').scrollTop = 0;
   document.getElementById('modalOverlay').classList.add('open');
 }
 
@@ -118,6 +139,7 @@ function closeModal() {
 // ── Event listeners ───────────────────────────────────────────
 
 document.getElementById('modalOverlay').addEventListener('click', closeModal);
+document.getElementById('modalClose').addEventListener('click', e => { e.stopPropagation(); closeModal(); });
 
 document.getElementById('participantsList').addEventListener('click', e => {
   const modalTrigger = e.target.closest('.avatar, .participant-info');
