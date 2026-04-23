@@ -1,0 +1,23 @@
+[
+  { "id": 1,  "firstName": "Danilo",          "lastName": "Ughetto",    "company": "Assimoco",                 "role": "Direttore ICT" },
+  { "id": 2,  "firstName": "Claudia",         "lastName": "Ferraguti",  "company": "Credemassicurazioni",      "role": "Direttore generale" },
+  { "id": 3,  "firstName": "Tarek",           "lastName": "Ghaddar",    "company": "HDI Assicurazioni",        "role": "Chief Information Officer" },
+  { "id": 4,  "firstName": "Luca",            "lastName": "Lanzoni",    "company": "HDI Assicurazioni",        "role": "General Manager / COO" },
+  { "id": 5,  "firstName": "Maurizio",        "lastName": "Sala",       "company": "Helvetia",                 "role": "Head IT Application Service Management" },
+  { "id": 6,  "firstName": "Andrea",          "lastName": "Amadei",     "company": "Intesa Assicurazioni",     "role": "Chief Operating Officer" },
+  { "id": 7,  "firstName": "Ciro",            "lastName": "Calzolaio",  "company": "Intesa Assicurazioni",     "role": "Responsabile Sistemi Informativi Danni" },
+  { "id": 8,  "firstName": "Vito",            "lastName": "Capezzera",  "company": "Mediolanum Assicurazioni", "role": "Responsabile Operations Protezione, Mediolanum Assicurazioni e Mediolanum Vita" },
+  { "id": 9,  "firstName": "Laura",           "lastName": "Baiano",     "company": "Mediolanum Assicurazioni", "role": "Chief Application Officer" },
+  { "id": 10, "firstName": "Stefano",         "lastName": "Berni",      "company": "Unipol Assicurazioni",     "role": "Responsabile IT" },
+  { "id": 11, "firstName": "Marco",           "lastName": "Bellea",     "company": "Unicredit",                "role": "Head of Client & Insurance Solutions" },
+  { "id": 12, "firstName": "Enzo Alessandro", "lastName": "Di Puma",    "company": "AXA Italia",               "role": "Chief Operating Officer" },
+  { "id": 13, "firstName": "Assunta",         "lastName": "Carbonara",  "company": "Amtrust",                  "role": "Head of Technology & System Development" },
+  { "id": 14, "firstName": "Thomas",          "lastName": "Lausdat",    "company": "Groupama",                 "role": "Direttore Vita e Linea Persone" },
+  { "id": 15, "firstName": "Marco",           "lastName": "Barioni",    "company": "Reale Group",              "role": "Group Chief Information Technology Officer" },
+  { "id": 16, "firstName": "Marco",           "lastName": "Di Guida",   "company": "Credit Agricole",          "role": "CEO" },
+  { "id": 17, "firstName": "Andrea",          "lastName": "Brusa",      "company": "Reale Mutua",              "role": "Chief Software Development Officer" },
+  { "id": 18, "firstName": "Umberto",         "lastName": "Costanzini", "company": "Generali",                 "role": "CEO Generali Core Tech" },
+  { "id": 19, "firstName": "Paolo",           "lastName": "Calvi",      "company": "Credemvita",               "role": "Team Leader Products and Operation" },
+  { "id": 20, "firstName": "Paola",           "lastName": "Invidia",    "company": "CNP Assurances SA",        "role": "Country General Manager" },
+  { "id": 21, "firstName": "Giorgio",         "lastName": "Maccagni",   "company": "CNP Assurances SA",        "role": "Responsabile Organizzazione, IT/PMO, Acquisti e Servizi Generali" }
+]
