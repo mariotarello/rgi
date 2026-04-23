@@ -132,10 +132,12 @@ function openModal(p) {
 
   document.getElementById('modalInfo').scrollTop = 0;
   document.getElementById('modalOverlay').classList.add('open');
+  document.body.classList.add('modal-open');
 }
 
 function closeModal() {
   document.getElementById('modalOverlay').classList.remove('open');
+  document.body.classList.remove('modal-open');
 }
 
 // ── Event listeners ───────────────────────────────────────────

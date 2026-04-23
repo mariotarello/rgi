@@ -22,6 +22,8 @@
 
 html { scroll-behavior: smooth; }
 
+body.modal-open { overflow: hidden; }
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--bg-root);
