@@ -449,6 +449,48 @@
       color: var(--accent);
     }
 
+    /* ── Hover su avatar e info (modale) ───────────────────────── */
+
+    .avatar { cursor: pointer; }
+    .avatar img { transition: filter 0.18s ease; }
+    .avatar:hover img { filter: brightness(1.22) saturate(1.05); }
+    .avatar::after { transition: opacity 0.18s ease; }
+    .avatar:hover::after { opacity: 0.8; }
+
+    .participant-info { cursor: pointer; transition: opacity 0.18s ease; }
+    .participant-info:hover { opacity: 0.72; }
+
+    /* ── Modale foto ─────────────────────────────────────────── */
+
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.93); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      align-items: center; justify-content: center;
+      padding: 1.5rem 1rem; cursor: pointer;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal-card {
+      background: #0e1420;
+      border: 1px solid rgba(43,172,226,0.3);
+      border-radius: 20px; max-width: 380px; width: 100%;
+      overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.8);
+      animation: modalIn 0.2s ease; cursor: default;
+    }
+
+    .modal-photo { display: block; width: 100%; aspect-ratio: 1/1; object-fit: cover; object-position: top center; }
+
+    .modal-info { padding: 1.2rem 1.4rem 1.6rem; }
+    .modal-name { font-size: 1.2rem; font-weight: 700; color: #dde6f0; line-height: 1.25; margin-bottom: 0.4rem; }
+    .modal-company { font-size: 0.95rem; font-weight: 600; color: #2bace2; margin-bottom: 0.3rem; }
+    .modal-role { font-size: 0.88rem; font-weight: 400; color: #7a91b0; line-height: 1.45; }
+
     /* ── Responsive – Desktop ────────────────────────────────── */
 
     @media (min-width: 600px) {
@@ -567,6 +609,18 @@
   <main>
     <div class="participants-list" id="participantsList"></div>
   </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+      <img class="modal-photo" id="modalPhoto" src="" alt=""
+           onerror="this.onerror=null;this.src='img/placeholder.jpg';">
+      <div class="modal-info">
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-company" id="modalCompany"></div>
+        <div class="modal-role" id="modalRole"></div>
+      </div>
+    </div>
+  </div>
 
   <script>
     const participants = [
@@ -696,9 +750,37 @@
       } catch (e) { /* ignore */ }
     }
 
+    // ── Modale foto ───────────────────────────────────────────────
+
+    function openModal(p) {
+      document.getElementById('modalPhoto').src = getImagePath(p.lastName);
+      document.getElementById('modalPhoto').alt = `${p.lastName} ${p.firstName}`;
+      document.getElementById('modalName').textContent    = `${p.lastName} ${p.firstName}`;
+      document.getElementById('modalCompany').textContent = p.company;
+      document.getElementById('modalRole').textContent    = p.role;
+      document.getElementById('modalOverlay').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+    }
+
+    document.getElementById('modalOverlay').addEventListener('click', closeModal);
+
     // ── Event listeners ───────────────────────────────────────────
 
     document.getElementById('participantsList').addEventListener('click', e => {
+      // Modal trigger: avatar or info block
+      const modalTrigger = e.target.closest('.avatar, .participant-info');
+      if (modalTrigger) {
+        const card = modalTrigger.closest('.participant-card');
+        if (card) {
+          const p = participants.find(p => p.id === Number(card.dataset.id));
+          if (p) openModal(p);
+        }
+        return;
+      }
+      // Toggle presence
       const toggle = e.target.closest('.toggle-switch');
       if (!toggle) return;
       const card = toggle.closest('.participant-card');
