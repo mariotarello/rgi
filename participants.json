@@ -9,25 +9,37 @@
       {
         "company": "Gruppo Assimoco",
         "roles": [
-          { "role": "Direttore ICT", "period": "Feb 2022 – Present" }
+          {
+            "role": "Direttore ICT",
+            "period": "Feb 2022 – Present"
+          }
         ]
       },
       {
         "company": "Fondo Pensione Dirigenti Gruppo Assimoco",
         "roles": [
-          { "role": "Vice Presidente", "period": "Sep 2015 – Present" }
+          {
+            "role": "Vice Presidente",
+            "period": "Sep 2015 – Present"
+          }
         ]
       },
       {
         "company": "Augusta Assicurazioni",
         "roles": [
-          { "role": "Head of Development / IT Help Desk & Contact Centre", "period": "Jun 1995 – Jan 2002" }
+          {
+            "role": "Head of Development in IT Life Department / Head of IT Help Desk and Company’s Contact Centre",
+            "period": "Jun 1995 – Jan 2002"
+          }
         ]
       },
       {
         "company": "NTT DATA Italia",
         "roles": [
-          { "role": "Senior Consultant / IT Analyst", "period": "Jul 1988 – Dec 1994" }
+          {
+            "role": "Senior Consultant / IT Analyst",
+            "period": "Jul 1988 – Dec 1994"
+          }
         ]
       }
     ]
@@ -42,15 +54,47 @@
       {
         "company": "Credemassicurazioni",
         "roles": [
-          { "role": "Direttore generale", "period": "Mar 2025 – Present" },
-          { "role": "Membro del consiglio di amministrazione", "period": "Apr 2025 – Present" }
+          {
+            "role": "Direttore generale",
+            "period": "Mar 2025 – Present"
+          },
+          {
+            "role": "Membro del consiglio di amministrazione",
+            "period": "Apr 2025 – Present"
+          }
         ]
       },
       {
         "company": "Credem",
         "roles": [
-          { "role": "Responsabile Retail Banking", "period": "Jun 2021 – Mar 2025" },
-          { "role": "Direttore territoriale", "period": "2007 – 2021" }
+          {
+            "role": "Responsabile Retail Banking",
+            "period": "Jun 2021 – Mar 2025"
+          },
+          {
+            "role": "Direttore territoriale",
+            "period": "Feb 2018 – May 2021"
+          },
+          {
+            "role": "Direttore territoriale",
+            "period": "Dec 2013 – Jan 2018"
+          },
+          {
+            "role": "Direttore territoriale",
+            "period": "Jun 2007 – Nov 2013"
+          },
+          {
+            "role": "Staff direzione commerciale",
+            "period": "2004 – 2007"
+          },
+          {
+            "role": "Senior Human Resources Assistant",
+            "period": "2003 – 2004"
+          },
+          {
+            "role": "Gestore aziende small business / retail",
+            "period": "1997 – 2003"
+          }
         ]
       }
     ]
@@ -65,20 +109,71 @@
       {
         "company": "HDI Assicurazioni",
         "roles": [
-          { "role": "Chief Information Officer", "period": "Jan 2026 – Present" }
+          {
+            "role": "Chief Information Officer",
+            "period": "Jan 2026 – Present"
+          }
         ]
       },
       {
         "company": "AXA Italia",
         "roles": [
-          { "role": "Deputy CIO", "period": "Feb 2023 – Dec 2025" },
-          { "role": "Head of IT Strategy & Governance", "period": "Mar 2017 – Feb 2023" }
+          {
+            "role": "Deputy CIO",
+            "period": "Feb 2023 – Dec 2025"
+          },
+          {
+            "role": "Head of IT Strategy & Governance",
+            "period": "Mar 2017 – Feb 2023"
+          }
         ]
       },
       {
         "company": "Intesa Sanpaolo",
         "roles": [
-          { "role": "Head of IT Strategy & Control", "period": "Jul 2012 – Mar 2017" }
+          {
+            "role": "Head of IT Strategy & Control",
+            "period": "Jul 2012 – Mar 2017"
+          },
+          {
+            "role": "Head of Enterprise Architecture and Change Management",
+            "period": "2013 – 2015"
+          }
+        ]
+      },
+      {
+        "company": "CheBanca!",
+        "roles": [
+          {
+            "role": "Change, Configuration and Incident Manager",
+            "period": "Jun 2010 – Dec 2013"
+          },
+          {
+            "role": "IT Release and Change Manager",
+            "period": "Jan 2008 – Oct 2010"
+          },
+          {
+            "role": "IT Middleware and Database Manager",
+            "period": "Sep 2007 – Nov 2008"
+          }
+        ]
+      },
+      {
+        "company": "Barclays Bank PLC",
+        "roles": [
+          {
+            "role": "Database and Unix Team Leader",
+            "period": "Sep 2005 – Aug 2007"
+          }
+        ]
+      },
+      {
+        "company": "DBS Group / database administration",
+        "roles": [
+          {
+            "role": "Senior Database Administrator",
+            "period": "Aug 2001 – May 2005"
+          }
         ]
       }
     ]
@@ -93,8 +188,72 @@
       {
         "company": "HDI Assicurazioni",
         "roles": [
-          { "role": "Deputy General Manager – COO", "period": "May 2018 – Present" },
-          { "role": "Director Organization, IT and Operations", "period": "Sep 2014 – Apr 2018" }
+          {
+            "role": "Deputy General Manager – COO",
+            "period": "May 2018 – Present"
+          },
+          {
+            "role": "Director Organization, Information Technology and Operations",
+            "period": "Sep 2014 – Apr 2018"
+          }
+        ]
+      },
+      {
+        "company": "CBA Assicurazioni",
+        "roles": [
+          {
+            "role": "Board Member",
+            "period": "Jul 2016 – Jul 2017"
+          }
+        ]
+      },
+      {
+        "company": "Chiara Assicurazioni",
+        "roles": [
+          {
+            "role": "Board Member",
+            "period": "Jul 2016 – Jul 2017"
+          }
+        ]
+      },
+      {
+        "company": "Trust & Advisory",
+        "roles": [
+          {
+            "role": "Partner",
+            "period": "Jun 2013 – Aug 2014"
+          }
+        ]
+      },
+      {
+        "company": "Allianz Italia",
+        "roles": [
+          {
+            "role": "Direttore Digitalization",
+            "period": "Sep 2011 – Dec 2012"
+          }
+        ]
+      },
+      {
+        "company": "Cattolica Assicurazioni",
+        "roles": [
+          {
+            "role": "Director – Operations & Information Technology",
+            "period": "Jan 2003 – May 2011"
+          },
+          {
+            "role": "Chief Financial Officer",
+            "period": "Jan 2001 – Dec 2002"
+          }
+        ]
+      },
+      {
+        "company": "Settore assicurativo / motor business",
+        "roles": [
+          {
+            "role": "Ruoli operation, claims e planning",
+            "period": "1995 – 2001"
+          }
         ]
       }
     ]
@@ -104,13 +263,71 @@
     "firstName": "Maurizio",
     "lastName": "Sala",
     "company": "Helvetia Insurance Italy",
-    "role": "Head IT Application Service Management",
+    "role": "Head IT Application Service Management (CIO Deputy)",
     "experience": [
       {
         "company": "Helvetia Insurance Italy",
         "roles": [
-          { "role": "Head IT Application Service Management", "period": "Oct 2022 – Present" },
-          { "role": "Head IT No Life Applications", "period": "2018 – 2022" }
+          {
+            "role": "Head IT Application Service Management (CIO Deputy)",
+            "period": "Oct 2022 – Present"
+          },
+          {
+            "role": "Head IT No Life Applications & Integration Services",
+            "period": "Oct 2018 – Sep 2022"
+          },
+          {
+            "role": "Head of IT Bancassurance",
+            "period": "Oct 2013 – Sep 2018"
+          }
+        ]
+      },
+      {
+        "company": "Chiara Assicurazioni",
+        "roles": [
+          {
+            "role": "Head of Organization & ICT",
+            "period": "Oct 2011 – Nov 2013"
+          },
+          {
+            "role": "CIO",
+            "period": "Jun 2010 – Oct 2011"
+          }
+        ]
+      },
+      {
+        "company": "Vittoria Assicurazioni",
+        "roles": [
+          {
+            "role": "Demand Manager Area Danni",
+            "period": "Jan 2009 – May 2010"
+          },
+          {
+            "role": "Responsabile Area IT Claims e DWH",
+            "period": "Apr 2007 – Dec 2008"
+          }
+        ]
+      },
+      {
+        "company": "Zurich Financial Services",
+        "roles": [
+          {
+            "role": "Program Manager (Area Danni)",
+            "period": "Jul 2005 – Mar 2007"
+          },
+          {
+            "role": "Application Development Manager (Claims)",
+            "period": "Jan 2003 – Jan 2005"
+          }
+        ]
+      },
+      {
+        "company": "Norwich Union / Aviva",
+        "roles": [
+          {
+            "role": "Business Analyst Area Danni",
+            "period": "Jan 1997 – Sep 1999"
+          }
         ]
       }
     ]
@@ -125,20 +342,304 @@
       {
         "company": "Intesa Sanpaolo Assicurazioni",
         "roles": [
-          { "role": "Chief Operating Officer", "period": "Feb 2025 – Present" }
+          {
+            "role": "Chief Operating Officer",
+            "period": "Feb 2025 – Present"
+          }
         ]
       },
       {
         "company": "Intesa Sanpaolo",
         "roles": [
-          { "role": "IT & Digital Transformation Leader", "period": "Dec 2018 – Feb 2025" }
+          {
+            "role": "IT & Digital Transformation Leader",
+            "period": "Dec 2018 – Feb 2025"
+          }
+        ]
+      },
+      {
+        "company": "VW Life Insurance Lux S.A.",
+        "roles": [
+          {
+            "role": "Head of Italy Branch",
+            "period": "Oct 2018 – Nov 2018"
+          }
+        ]
+      },
+      {
+        "company": "Be Think, Solve, Execute",
+        "roles": [
+          {
+            "role": "Partner",
+            "period": "Oct 2017 – Sep 2018"
+          }
         ]
       },
       {
         "company": "Aviva Italy",
         "roles": [
-          { "role": "Chief Operating Officer & Retail Director", "period": "Apr 2015 – Jun 2017" },
-          { "role": "Chief Operating Officer", "period": "Jul 2012 – Mar 2015" }
+          {
+            "role": "Chief Operating Officer & Retail Director",
+            "period": "Apr 2015 – Jun 2017"
+          },
+          {
+            "role": "Chief Operating Officer",
+            "period": "Jul 2012 – Mar 2015"
+          }
+        ]
+      },
+      {
+        "company": "Aviva Europe",
+        "roles": [
+          {
+            "role": "IT Application Director",
+            "period": "May 2009 – Jun 2012"
+          }
+        ]
+      },
+      {
+        "company": "Accenture",
+        "roles": [
+          {
+            "role": "Senior Manager",
+            "period": "Apr 1997 – May 2009"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "firstName": "Ciro",
+    "lastName": "Calzolaio",
+    "company": "Intesa Sanpaolo Assicurazioni",
+    "role": "Responsabile Sistemi Informativi Danni",
+    "experience": [
+      {
+        "company": "Intesa Sanpaolo Assicurazioni",
+        "roles": [
+          {
+            "role": "Responsabile Sistemi Informativi Danni",
+            "period": "Feb 2025 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Intesa Sanpaolo Assicura",
+        "roles": [
+          {
+            "role": "Head of Applicativi di Portafoglio",
+            "period": "Jun 2021 – Mar 2025"
+          }
+        ]
+      },
+      {
+        "company": "Intesa Sanpaolo",
+        "roles": [
+          {
+            "role": "Coordinatore attività di Project Management Office",
+            "period": "Nov 2014 – Mar 2025"
+          },
+          {
+            "role": "IT Project Manager",
+            "period": "Oct 2006 – Mar 2025"
+          }
+        ]
+      },
+      {
+        "company": "Enel",
+        "roles": [
+          {
+            "role": "IT Solutions Architect",
+            "period": "2001 – 2006"
+          }
+        ]
+      },
+      {
+        "company": "Spazio ZeroUno",
+        "roles": [
+          {
+            "role": "Consultant",
+            "period": "2000 – 2001"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "firstName": "Vito",
+    "lastName": "Capezzera",
+    "company": "Banca Mediolanum",
+    "role": "Responsabile Operations Protezione Mediolanum Assicurazioni e Mediolanum Vita",
+    "experience": [
+      {
+        "company": "Banca Mediolanum",
+        "roles": [
+          {
+            "role": "Responsabile Operations Protezione Mediolanum Assicurazioni e Mediolanum Vita",
+            "period": "Apr 2025 – Present"
+          },
+          {
+            "role": "Responsabile Sviluppo Commerciale e Canali Distributivi",
+            "period": "Jan 2020 – Mar 2025"
+          },
+          {
+            "role": "Responsabile Amm. Tecnica e Gestione del Portafoglio",
+            "period": "May 2015 – Dec 2019"
+          },
+          {
+            "role": "Responsabile Amm. Tecnica e Servizi di Supporto",
+            "period": "Dec 2013 – Apr 2015"
+          }
+        ]
+      },
+      {
+        "company": "CDO Club",
+        "roles": [
+          {
+            "role": "Membro del consiglio direttivo",
+            "period": "Jan 2020 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Generali Italia",
+        "roles": [
+          {
+            "role": "Consulente",
+            "period": "May 2013 – Nov 2013"
+          }
+        ]
+      },
+      {
+        "company": "Novit Assicurazioni",
+        "roles": [
+          {
+            "role": "Direttore tecnico",
+            "period": "Sep 2007 – Apr 2013"
+          }
+        ]
+      },
+      {
+        "company": "Augusta Assicurazioni",
+        "roles": [
+          {
+            "role": "Funzionario",
+            "period": "Jan 2003 – Aug 2007"
+          }
+        ]
+      },
+      {
+        "company": "Assimoco Assicurazioni",
+        "roles": [
+          {
+            "role": "Consulente",
+            "period": "Jul 1998 – May 2003"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "firstName": "Laura",
+    "lastName": "Baiano",
+    "company": "Banca Mediolanum",
+    "role": "Responsabile Fabbriche Prodotto e Sistemi di Sviluppo",
+    "experience": [
+      {
+        "company": "Banca Mediolanum",
+        "roles": [
+          {
+            "role": "Responsabile Fabbriche Prodotto e Sistemi di Sviluppo",
+            "period": "Sep 2024 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Consorzio Gruppo Montepaschi",
+        "roles": [
+          {
+            "role": "Chief Application Officer",
+            "period": "Jul 2020 – Sep 2024"
+          },
+          {
+            "role": "Responsabile Area Applicazioni Credito e Finanza",
+            "period": "2021 – 2023"
+          },
+          {
+            "role": "Responsabile Area Applicazioni Canali",
+            "period": "2020 – 2021"
+          },
+          {
+            "role": "Responsabile Area Applicazioni di Governo",
+            "period": "2017 – 2020"
+          },
+          {
+            "role": "PMO / Team Leader",
+            "period": "2007 – 2022"
+          },
+          {
+            "role": "Responsabile Servizio Applicazioni Risorse Umane, Acquisti e Immobiliare",
+            "period": "2015 – 2020"
+          },
+          {
+            "role": "Staff CIO",
+            "period": "2014 – 2020"
+          },
+          {
+            "role": "Responsabile Organizzazione",
+            "period": "2013 – 2020"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "firstName": "Stefano",
+    "lastName": "Berni",
+    "company": "UnipolSai Assicurazioni",
+    "role": "Integrazione e Presidio IT Soc. Specialistiche e Servizi Informatici Aree Staff",
+    "experience": [
+      {
+        "company": "UnipolSai Assicurazioni",
+        "roles": [
+          {
+            "role": "Integrazione e Presidio IT Soc. Specialistiche e Servizi Informatici Aree Staff",
+            "period": "Jan 2025 – Present"
+          },
+          {
+            "role": "Integrazione e Presidio IT Soc. Specialistiche e Servizi Informatici Aree Staff",
+            "period": "Sep 2024 – Jan 2025"
+          },
+          {
+            "role": "Sviluppo Servizi Informatici e Data Governance",
+            "period": "Jul 2018 – Sep 2024"
+          },
+          {
+            "role": "Integrazione Sistemi e Presidio Società Specialistiche",
+            "period": "Feb 2016 – Jul 2018"
+          }
+        ]
+      },
+      {
+        "company": "Accenture",
+        "roles": [
+          {
+            "role": "Managing Director Financial Services",
+            "period": "Oct 1997 – Feb 2016"
+          }
+        ]
+      },
+      {
+        "company": "Edi.Cer.",
+        "roles": [
+          {
+            "role": "IT Analyst",
+            "period": "Jun 1996 – Sep 1997"
+          }
         ]
       }
     ]
@@ -153,14 +654,252 @@
       {
         "company": "UniCredit",
         "roles": [
-          { "role": "Head of Client & Insurance Solutions", "period": "Aug 2025 – Present" },
-          { "role": "IT Manager", "period": "2020 – 2024" }
+          {
+            "role": "Head of Client & Insurance Solutions",
+            "period": "Aug 2025 – Present"
+          },
+          {
+            "role": "Head of Daily Banking in Group Technology Office",
+            "period": "Dec 2024 – Sep 2025"
+          },
+          {
+            "role": "IT Manager – Head of Competence Center",
+            "period": "Jul 2020 – Aug 2024"
+          },
+          {
+            "role": "Head of GCC Electronic Document Management",
+            "period": "Jan 2019 – Jul 2020"
+          },
+          {
+            "role": "Team Leader in Software Factory",
+            "period": "May 2018 – Nov 2019"
+          },
+          {
+            "role": "IT Analyst and Programming Specialist",
+            "period": "Mar 2016 – May 2018"
+          }
+        ]
+      },
+      {
+        "company": "LIUC – Università Cattaneo",
+        "roles": [
+          {
+            "role": "Professor Assistant",
+            "period": "Nov 2015 – Jul 2016"
+          }
         ]
       },
       {
         "company": "Reply",
         "roles": [
-          { "role": "IT Consultant", "period": "2015 – 2016" }
+          {
+            "role": "IT Consultant",
+            "period": "Dec 2015 – May 2016"
+          }
+        ]
+      },
+      {
+        "company": "Xensify",
+        "roles": [
+          {
+            "role": "Software Developer",
+            "period": "Sep 2014 – Jun 2015"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Enzo Alessandro",
+    "lastName": "Di Puma",
+    "company": "AXA Italia",
+    "role": "Chief Operating Officer",
+    "experience": [
+      {
+        "company": "AXA Italia",
+        "roles": [
+          {
+            "role": "Chief Operating Officer",
+            "period": "Dec 2017 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Linde Material Handling",
+        "roles": [
+          {
+            "role": "Sales & Operations VP",
+            "period": "Mar 2017 – Nov 2017"
+          }
+        ]
+      },
+      {
+        "company": "GE Capital",
+        "roles": [
+          {
+            "role": "Operations VP",
+            "period": "Jan 2009 – Feb 2017"
+          }
+        ]
+      },
+      {
+        "company": "Interbanca – Antonveneta Group",
+        "roles": [
+          {
+            "role": "Head of Strategy & PMO",
+            "period": "Oct 2006 – Dec 2008"
+          }
+        ]
+      },
+      {
+        "company": "Antonveneta ABN AMRO Bank",
+        "roles": [
+          {
+            "role": "Head of Risk Management",
+            "period": "Apr 2004 – Sep 2006"
+          }
+        ]
+      },
+      {
+        "company": "Deloitte",
+        "roles": [
+          {
+            "role": "Senior Consultant",
+            "period": "Aug 2002 – Mar 2004"
+          }
+        ]
+      },
+      {
+        "company": "Arthur Andersen",
+        "roles": [
+          {
+            "role": "Business Consultant",
+            "period": "Nov 2000 – Jul 2002"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "firstName": "Assunta",
+    "lastName": "Carbonara",
+    "company": "AmTrust Assicurazioni",
+    "role": "Head of Technology & System Development",
+    "experience": [
+      {
+        "company": "AmTrust Assicurazioni",
+        "roles": [
+          {
+            "role": "Head of Technology & System Development",
+            "period": "Jan 2025 – Present"
+          },
+          {
+            "role": "Head of Application Development & B.I.",
+            "period": "Mar 2022 – Feb 2025"
+          },
+          {
+            "role": "PMO & Transformation Manager – Operations",
+            "period": "Mar 2021 – Jan 2022"
+          }
+        ]
+      },
+      {
+        "company": "InfoEdge",
+        "roles": [
+          {
+            "role": "Insurance Consulting Services Leader",
+            "period": "Apr 2020 – Mar 2021"
+          },
+          {
+            "role": "Managing Consultant",
+            "period": "May 2019 – Apr 2020"
+          }
+        ]
+      },
+      {
+        "company": "RGI Group",
+        "roles": [
+          {
+            "role": "Project Manager",
+            "period": "Feb 2017 – Apr 2019"
+          },
+          {
+            "role": "Service Manager",
+            "period": "Jun 2015 – Jan 2017"
+          },
+          {
+            "role": "Analista Funzionale Senior",
+            "period": "Sep 2013 – Dec 2015"
+          },
+          {
+            "role": "Analista Funzionale",
+            "period": "Sep 2007 – Aug 2013"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "firstName": "Thomas",
+    "lastName": "Lausdat",
+    "company": "Groupama Assicurazioni",
+    "role": "Direttore Vita e Linea Persone",
+    "experience": [
+      {
+        "company": "Groupama Assicurazioni",
+        "roles": [
+          {
+            "role": "Direttore Vita e Linea Persone",
+            "period": "Oct 2018 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Groupama Grand Est",
+        "roles": [
+          {
+            "role": "Responsabile Marketing e Distribution",
+            "period": "May 2015 – Sep 2018"
+          }
+        ]
+      },
+      {
+        "company": "Groupama",
+        "roles": [
+          {
+            "role": "Responsabile Assicurazioni Vita, Prodotti Bancari e Gestione del Patrimonio",
+            "period": "Jan 2012 – Apr 2015"
+          }
+        ]
+      },
+      {
+        "company": "Groupama Biztosító",
+        "roles": [
+          {
+            "role": "Responsabile bancassicurazione Regione Europa Centrale ed Orientale",
+            "period": "Jan 2009 – Dec 2011"
+          }
+        ]
+      },
+      {
+        "company": "Groupama GAN VIE",
+        "roles": [
+          {
+            "role": "Responsabile sviluppo commerciale assicurazione Vita",
+            "period": "Oct 1998 – Dec 2008"
+          }
+        ]
+      },
+      {
+        "company": "Groupama Assurance-Crédit",
+        "roles": [
+          {
+            "role": "Consulente commerciale assicurazione crediti commerciali",
+            "period": "Jun 1992 – Oct 1997"
+          }
         ]
       }
     ]
@@ -175,13 +914,445 @@
       {
         "company": "Reale Group",
         "roles": [
-          { "role": "Group CIO", "period": "Jan 2024 – Present" }
+          {
+            "role": "Group Chief Information Technology Officer",
+            "period": "Jan 2024 – Present"
+          }
         ]
       },
       {
         "company": "Reale ITES",
         "roles": [
-          { "role": "CEO", "period": "2021 – Present" }
+          {
+            "role": "Chief Executive Officer",
+            "period": "Feb 2021 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Reale Mutua Assicurazioni",
+        "roles": [
+          {
+            "role": "Group Head of Resources Department",
+            "period": "Dec 2014 – Feb 2021"
+          },
+          {
+            "role": "Group Head of Organization and IT Demand Management Department",
+            "period": "Jul 2008 – Dec 2014"
+          }
+        ]
+      },
+      {
+        "company": "Accenture",
+        "roles": [
+          {
+            "role": "Senior Manager",
+            "period": "Sep 2005 – Feb 2010"
+          },
+          {
+            "role": "Manager",
+            "period": "Mar 2001 – Sep 2005"
+          },
+          {
+            "role": "Consultant",
+            "period": "Dec 1998 – Mar 2001"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "firstName": "Marco",
+    "lastName": "Di Guida",
+    "company": "Crédit Agricole Assicurazioni",
+    "role": "Amministratore Delegato",
+    "experience": [
+      {
+        "company": "Crédit Agricole Assicurazioni",
+        "roles": [
+          {
+            "role": "Amministratore Delegato",
+            "period": "Jan 2015 – Present"
+          },
+          {
+            "role": "Membro del Consiglio di Amministrazione",
+            "period": "Jun 2011 – Present"
+          },
+          {
+            "role": "Direttore Generale",
+            "period": "Jun 2011 – Dec 2014"
+          }
+        ]
+      },
+      {
+        "company": "ANIA",
+        "roles": [
+          {
+            "role": "Componente del Consiglio Direttivo",
+            "period": "Dec 2014 – Present"
+          },
+          {
+            "role": "Commissione Vita e Welfare",
+            "period": "Mar 2013 – Dec 2017"
+          }
+        ]
+      },
+      {
+        "company": "Crédit Agricole Assicurazioni Italia",
+        "roles": [
+          {
+            "role": "Direttore Amministrazione e Controllo, Affari Legali e Societari e Risorse Umane",
+            "period": "Sep 2007 – Jan 2015"
+          }
+        ]
+      },
+      {
+        "company": "Crédit Agricole Vita",
+        "roles": [
+          {
+            "role": "Direttore Amministrazione e Finanza",
+            "period": "Jun 2001 – Aug 2007"
+          }
+        ]
+      },
+      {
+        "company": "Ergo Assicurazioni",
+        "roles": [
+          {
+            "role": "Accounting Manager and Controller",
+            "period": "Jan 1995 – Dec 2000"
+          }
+        ]
+      },
+      {
+        "company": "Winterthur / Allstate",
+        "roles": [
+          {
+            "role": "Ruoli amministrazione e controllo",
+            "period": "1988 – 1994"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "firstName": "Andrea",
+    "lastName": "Brusa",
+    "company": "Reale Mutua Assicurazioni",
+    "role": "Chief Software Development Officer",
+    "experience": [
+      {
+        "company": "Reale Mutua Assicurazioni",
+        "roles": [
+          {
+            "role": "Chief Software Development Officer",
+            "period": "Nov 2021 – Present"
+          },
+          {
+            "role": "Responsabile degli sviluppi del gruppo",
+            "period": "Jan 2015 – Nov 2021"
+          },
+          {
+            "role": "Responsabile applicazioni di gruppo",
+            "period": "2008 – 2014"
+          },
+          {
+            "role": "CIO Italia",
+            "period": "Jul 2013 – Jan 2015"
+          },
+          {
+            "role": "Responsabile sviluppo area BO e CRM",
+            "period": "2011 – 2013"
+          },
+          {
+            "role": "Responsabile IT portafoglio e front office",
+            "period": "2008 – 2011"
+          }
+        ]
+      },
+      {
+        "company": "Accenture",
+        "roles": [
+          {
+            "role": "Senior Manager Financial Services",
+            "period": "2004 – 2008"
+          },
+          {
+            "role": "Senior Manager",
+            "period": "2001 – 2004"
+          },
+          {
+            "role": "Financial Services – Insurance Experience",
+            "period": "1997 – 2001"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "firstName": "Umberto",
+    "lastName": "Costanzini",
+    "company": "Generali",
+    "role": "Chief Executive Officer, Generali Core Tech",
+    "experience": [
+      {
+        "company": "Generali",
+        "roles": [
+          {
+            "role": "Chief Executive Officer, Generali Core Tech",
+            "period": "Jan 2025 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Allianz Group",
+        "roles": [
+          {
+            "role": "Chief Technology and Transformation Officer",
+            "period": "Apr 2021 – Apr 2025"
+          }
+        ]
+      },
+      {
+        "company": "Allianz Technology",
+        "roles": [
+          {
+            "role": "Head of Infrastructure and Information Security",
+            "period": "Jul 2018 – Apr 2021"
+          }
+        ]
+      },
+      {
+        "company": "Allianz",
+        "roles": [
+          {
+            "role": "Head of Global and Regional Lines",
+            "period": "Jun 2015 – Jun 2018"
+          },
+          {
+            "role": "Head of Transition Management",
+            "period": "Sep 2013 – Jun 2015"
+          }
+        ]
+      },
+      {
+        "company": "Accenture",
+        "roles": [
+          {
+            "role": "Managing Director",
+            "period": "Jan 2001 – Sep 2013"
+          }
+        ]
+      },
+      {
+        "company": "Hardwarene / Software",
+        "roles": [
+          {
+            "role": "Engineer",
+            "period": "1996 – 1997"
+          }
+        ]
+      },
+      {
+        "company": "University of California, Berkeley",
+        "roles": [
+          {
+            "role": "Researcher and Teaching Assistant",
+            "period": "1993 – 1994"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "firstName": "Paolo",
+    "lastName": "Calvi",
+    "company": "Credemvita",
+    "role": "Team Leader Products and Operations",
+    "experience": [
+      {
+        "company": "Credemvita",
+        "roles": [
+          {
+            "role": "Team Leader Products and Operations",
+            "period": "Oct 2023 – Present"
+          }
+        ]
+      },
+      {
+        "company": "Credem Banca",
+        "roles": [
+          {
+            "role": "Wealth Management | Building Partnerships and Ecosystems",
+            "period": "Apr 2023 – Sep 2023"
+          },
+          {
+            "role": "Head of Group Project Portfolio Strategy, Demand and Planning",
+            "period": "May 2021 – Apr 2023"
+          },
+          {
+            "role": "Head of IT Governance and Planning",
+            "period": "Apr 2018 – May 2021"
+          },
+          {
+            "role": "Mobile Banking Project Manager",
+            "period": "Nov 2014 – Apr 2018"
+          },
+          {
+            "role": "Single Supervisory Mechanism Program Manager",
+            "period": "Jun 2013 – Nov 2014"
+          }
+        ]
+      },
+      {
+        "company": "Banca Euromobiliare",
+        "roles": [
+          {
+            "role": "Chief Operating Officer",
+            "period": "2010 – 2013"
+          }
+        ]
+      },
+      {
+        "company": "Accenture",
+        "roles": [
+          {
+            "role": "Manager",
+            "period": "Oct 2006 – Sep 2009"
+          }
+        ]
+      },
+      {
+        "company": "Andersen Consulting",
+        "roles": [
+          {
+            "role": "Manager",
+            "period": "1997 – 2006"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "firstName": "Paola",
+    "lastName": "Invidia",
+    "company": "CNP Assurances SA – Rappresentanza Generale per l’Italia",
+    "role": "Country General Manager",
+    "experience": [
+      {
+        "company": "CNP Assurances SA – Rappresentanza Generale per l’Italia",
+        "roles": [
+          {
+            "role": "Country General Manager",
+            "period": "Oct 2022 – Present"
+          }
+        ]
+      },
+      {
+        "company": "CNP Partners Italia",
+        "roles": [
+          {
+            "role": "Chief Operating Officer",
+            "period": "Apr 2018 – Dec 2022"
+          },
+          {
+            "role": "Director of Operations",
+            "period": "Nov 2014 – Apr 2018"
+          }
+        ]
+      },
+      {
+        "company": "Cardif Assicurazioni",
+        "roles": [
+          {
+            "role": "Responsabile Back Office Operativo",
+            "period": "Jan 2008 – Nov 2014"
+          }
+        ]
+      },
+      {
+        "company": "Arca Vita",
+        "roles": [
+          {
+            "role": "Responsabile Portafoglio Auto",
+            "period": "Mar 2004 – Dec 2007"
+          },
+          {
+            "role": "Impiegato Portafoglio Auto",
+            "period": "Jan 2000 – Mar 2004"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "firstName": "Giorgio",
+    "lastName": "Maccagni",
+    "company": "CNP Assurances SA",
+    "role": "Responsabile Organizzazione, IT/PMO, Acquisti e Servizi Generali",
+    "experience": [
+      {
+        "company": "CNP Assurances SA",
+        "roles": [
+          {
+            "role": "Responsabile Organizzazione, IT/PMO, Acquisti e Servizi Generali",
+            "period": "Apr 2025 – Present"
+          }
+        ]
+      },
+      {
+        "company": "CNP Partners Italia",
+        "roles": [
+          {
+            "role": "Responsabile Organizzazione, IT & PMO",
+            "period": "Jan 2023 – Apr 2025"
+          },
+          {
+            "role": "Project & Organization Manager",
+            "period": "Dec 2016 – Jan 2023"
+          }
+        ]
+      },
+      {
+        "company": "Private Assicurazioni",
+        "roles": [
+          {
+            "role": "Project Manager e Responsabile PMO",
+            "period": "Jul 2015 – Dec 2016"
+          }
+        ]
+      },
+      {
+        "company": "GE.SA.",
+        "roles": [
+          {
+            "role": "Senior Organization Manager",
+            "period": "Jun 2007 – Jul 2015"
+          }
+        ]
+      },
+      {
+        "company": "Euler Hermes",
+        "roles": [
+          {
+            "role": "Senior Organization Analyst",
+            "period": "Nov 2006 – Jun 2007"
+          }
+        ]
+      },
+      {
+        "company": "BIP / contesto consulenza organizzativa",
+        "roles": [
+          {
+            "role": "Senior Organization Analyst",
+            "period": "Jul 2002 – Nov 2006"
+          }
         ]
       }
     ]
