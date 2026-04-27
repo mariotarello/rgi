@@ -150,7 +150,7 @@ document.getElementById('participantsList').addEventListener('click', e => {
   if (modalTrigger) {
     const card = modalTrigger.closest('.participant-card');
     if (card) {
-      const p = participants.find(p => p.id === Number(card.dataset.id));
+      const p = participants.find(p => p.id === card.dataset.id);
       if (p) openModal(p);
     }
     return;
@@ -158,7 +158,7 @@ document.getElementById('participantsList').addEventListener('click', e => {
   const toggle = e.target.closest('.toggle-switch');
   if (!toggle) return;
   const card = toggle.closest('.participant-card');
-  if (card) togglePresence(Number(card.dataset.id));
+  if (card) togglePresence(card.dataset.id);
 });
 
 document.getElementById('filterSelect').addEventListener('change', function () {
